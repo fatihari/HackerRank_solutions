@@ -3,4 +3,4 @@
  */
  
 SELECT * FROM city
-WHERE country_code = 'JPN';
+WHERE countrycode = 'JPN';
