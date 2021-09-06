@@ -20,8 +20,13 @@ public class Solution {
 			Object o;// Must be used to hold the reference of the instance of the class Solution.Inner.Private
 
             //Enter your code:
-            o = new Inner().new Private();
-            System.out.println(num + " is " + ((Solution.Inner.Private) o).powerof2(num));
+           /* o = new Inner().new Private();
+            System.out.println(num + " is " + ((Solution.Inner.Private) o).powerof2(num));*/
+            
+            Solution.Inner instance = new Solution.Inner();
+            Inner.Private inner = instance.new Private();
+            o = (Object) inner;      
+            System.out.println(num + " is " + inner.powerof2(num)) ;
 
 		System.out.println("An instance of class: " + o.getClass().getCanonicalName() + " has been created");
 		
