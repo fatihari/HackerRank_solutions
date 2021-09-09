@@ -9,7 +9,7 @@ import java.lang.reflect.Method;
 class Printer
 {
    //Write your code here
-    public <T> void printArray(T [] inputArray)
+    public static <T> void printArray(T [] inputArray)
     {
         for(T i : inputArray)
             System.out.println(i);
@@ -20,7 +20,7 @@ public class Solution {
 
 
     public static void main( String args[] ) {
-        Printer myPrinter = new Printer();
+        Printer myPrinter = new Printer(); //It can be Printer.printArray() since static method.
         Integer[] intArray = { 1, 2, 3 };
         String[] stringArray = {"Hello", "World"};
         myPrinter.printArray(intArray);
